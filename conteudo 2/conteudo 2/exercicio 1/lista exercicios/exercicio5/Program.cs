@@ -1,7 +1,4 @@
-﻿using System.Reflection;
-using System.Reflection.Metadata;
-
-namespace exercicio5
+﻿namespace exercicio5
 {
     internal class Program
     {
@@ -17,12 +14,12 @@ namespace exercicio5
                 double diametro2 = Convert.ToDouble(diametro);
 
                 double resultado2 = Math.Pow(diametro2, 3);
-                
-               double resultado1 = 4/3 * 3.14;
+
+                double resultado1 = (4 / 3) * 3.14;
 
                 double resultado3 = resultado1 * resultado2;
 
-                Console.WriteLine("O diametro e:" + resultado3 );
+                Console.WriteLine("O diametro e:" + resultado3);
 
 
                 Console.WriteLine("Digite S para sair e N para voltar ao inicio");
@@ -42,13 +39,6 @@ namespace exercicio5
 
 
                 }
-
-
-
-
-
-
-
 
             }
         }

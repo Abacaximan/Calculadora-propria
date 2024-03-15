@@ -3,13 +3,9 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>Exercicio_9</RootNamespace>
+    <RootNamespace>Exercicio_17</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Exercicio 7\Exercicio 7.csproj" />
-  </ItemGroup>
 
 </Project>

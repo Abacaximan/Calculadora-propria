@@ -9,9 +9,6 @@
                 Console.Clear();
 
 
-
-
-
                 Console.WriteLine("digite a quantidade de paes que foram vendidos no dia");
                 string quantidadepaes = "";
                 quantidadepaes=Console.ReadLine();
@@ -48,7 +45,6 @@
 
 
                 }
-
 
             }
 
