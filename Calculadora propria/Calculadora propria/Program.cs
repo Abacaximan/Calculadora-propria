@@ -1,10 +1,13 @@
 ﻿using System.Diagnostics;
+using System.Net.NetworkInformation;
 using System.Reflection.Metadata;
 
 namespace Calculadora_propria
 {
     internal class Program
     {
+        private static double segundoNumero;
+
         static void Main(string[] args)
         {
 
@@ -24,23 +27,37 @@ namespace Calculadora_propria
                 string operacao = Console.ReadLine();
 
                              {
-                        if (operacao == "S")
-                        {
-                            break;
-                        }
+
+
+                    if (operacao != "S" && operacao != "1" && operacao != "2" && operacao != "3" && operacao != "4" && operacao != "s")
+                    {
+
+                        Console.WriteLine("informe uma operacao valida");
+                        Console.ReadLine();
+                        continue;
+
+
+                    }
+
+                    else if (operacao == "S")
+                    {
+                        break;
+                    }
+
+                                  
+
                         Console.WriteLine();
 
                         Console.WriteLine("Digite o primeiro numero");
                         string primeironumerostring = Console.ReadLine();
-                        int primeironumero = Convert.ToInt32(primeironumerostring);
+                         double primeironumero = Convert.ToDouble(primeironumerostring);
 
-
-                        Console.WriteLine("digite o segundo numero");
+                    Console.WriteLine("digite o segundo numero");
                         string segundonumerostring = Console.ReadLine();
-                        int segundonumero = Convert.ToInt32(segundonumerostring);
+                        double segundonumero = Convert.ToDouble(segundonumerostring);
 
 
-                        int resultado = 0;
+                    double resultado = 0;
 
                         if (operacao == "1")
                         {
@@ -57,16 +74,16 @@ namespace Calculadora_propria
                         else if (operacao == "3")
                         {
 
-                            if (segundonumero <= 0 || primeironumero <= 0)
-                            {
-
-                                Console.Clear();
-                            }
+                        while (segundonumero == 0)
+                        {
 
 
-                            resultado = primeironumero / segundonumero;
-                            Console.WriteLine("todo numero dividido por 0 e igual a zero");
-                            Console.WriteLine("Aperte enter para voltar ao inicio");
+                            Console.WriteLine("Digite um numero maior que zero");
+
+                            segundonumero = Convert.ToDouble(Console.ReadLine());
+                        }
+                        resultado = primeironumero / segundonumero;
+                            
 
                         }
 
