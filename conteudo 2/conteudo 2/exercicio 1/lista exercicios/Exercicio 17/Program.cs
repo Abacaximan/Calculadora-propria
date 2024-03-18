@@ -10,6 +10,8 @@ namespace Exercicio_17
             {
                 Console.Clear();
 
+                Console.WriteLine("Calculadora para diferenciar se a soma dos dois primeiros numeros sao maiores do que o terceiro.");
+
                 Console.WriteLine("Escreva o primeiro valor (A)");
                 string primeirovalor = "";
                 primeirovalor = Console.ReadLine();
@@ -28,23 +30,19 @@ namespace Exercicio_17
 
                 double resultado1 = primeirovalor1 + segundovalor1;
 
-                if (resultado1 > 0) {
+                if (resultado1 > terceirovalor1) {
 
                     Console.WriteLine("A soma dos dois primeiros valores e maior do que C, a soma total e " + resultado1);
                 
                 }
-
-                if (resultado1 < 0)
+                if (resultado1 < terceirovalor1)
                 {
-
-
                     Console.WriteLine("A soma dos dois primeiros valores e menor do que C, a soma total e " + resultado1);
-
-
 
                     Console.WriteLine("Digite S para sair e N para voltar ao inicio");
 
                     String sair = Console.ReadLine();
+
                     if (sair == "S")
                     {
 

@@ -8,8 +8,9 @@
             
               Console.Clear();
 
-                Console.WriteLine("calculadora ponderada");
+                Console.WriteLine("calculadora de media ponderada");
 
+                
 
                 Console.WriteLine("digite o peso dessa prova");
                 string peso1 = "";

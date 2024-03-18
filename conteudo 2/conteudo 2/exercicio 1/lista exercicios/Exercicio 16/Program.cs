@@ -7,6 +7,8 @@
            while (true)
             {
 
+                Console.WriteLine("Calculadora de salario com base em um aumento de 15% ");
+
                 Console.Clear();
                 Console.WriteLine("Digite o seu salario");
                 string salario = "";

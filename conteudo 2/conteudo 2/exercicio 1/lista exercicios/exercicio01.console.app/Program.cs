@@ -10,6 +10,9 @@ namespace exercicio01.console.app
           while (true) {
                 Console.Clear();
 
+                Console.WriteLine("Calculadora para comprimento de um retangulo");
+
+
            Console.WriteLine("Digite o comprimento do retangulo");
 
                 string primeirodadostring = "";

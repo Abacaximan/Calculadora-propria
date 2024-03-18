@@ -8,6 +8,7 @@
             
                 Console.Clear();
 
+                Console.WriteLine("Calculadora para a arrecadaçao diaria de uma padaria e o quanto ela deve investir na poupança com uma base de 10%");
 
                 Console.WriteLine("digite a quantidade de paes que foram vendidos no dia");
                 string quantidadepaes = "";

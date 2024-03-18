@@ -6,7 +6,12 @@
         {
             while (true)
             {
+
                 Console.Clear();
+
+                Console.WriteLine("Calculadora de diametro de uma esfera");
+
+
 
                 Console.WriteLine("digite o diametro da esfera");
                 string diametro = "";
@@ -23,6 +28,10 @@
 
 
                 Console.WriteLine("Digite S para sair e N para voltar ao inicio");
+
+                //nao consegui acertar a operaçao para o diametro da esfera.
+
+
 
                 String sair = Console.ReadLine();
 

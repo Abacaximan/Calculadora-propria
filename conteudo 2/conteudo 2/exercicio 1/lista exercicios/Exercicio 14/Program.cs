@@ -6,6 +6,9 @@
         {
          while (true)
             {
+
+                Console.WriteLine("Calculadora de quantos dias voce ja viveu");
+
                 Console.Clear();
                 Console.WriteLine("Qual e seu nome ?");
                 string nome = "";

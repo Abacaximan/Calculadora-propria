@@ -7,6 +7,7 @@
             while (true) { 
            Console.Clear();
 
+                Console.WriteLine("conversora de temperatura Fahrenheit para Celsius");
 
                 Console.WriteLine("escreva a temperatura em Fahrenheit");
 
