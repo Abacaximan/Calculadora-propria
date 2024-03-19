@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Net.NetworkInformation;
+using System.Reflection;
 using System.Reflection.Metadata;
 
 namespace Calculadora_propria
@@ -10,7 +11,7 @@ namespace Calculadora_propria
 
         static void Main(string[] args)
         {
-
+            #region Algoritmo
             while (true)
             {
                 string operacao = mostrarmenu();
@@ -18,59 +19,34 @@ namespace Calculadora_propria
                 if (opcaodesaidaselecionada(operacao))
                     break;
 
-                #region codigo 
+
+                if (opcaoinvalida(operacao))
                 {
-                    if (operacao != "S" && operacao != "1" && operacao != "2" && operacao != "3" && operacao != "4" && operacao != "s")
-                    {
-                        Console.WriteLine("informe uma operacao valida");
-                        Console.ReadLine();
-                        continue;
-                    }
-                    else if (operacao == "S" || operacao == "s")
-                    {
-                        break;
-                    }
-                    Console.WriteLine();
-                    Console.WriteLine("Digite o primeiro numero");
 
-                    double primeironumero = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("digite o segundo numero");
-
-                    double segundonumero = Convert.ToDouble(Console.ReadLine());
-                    double resultado = 0;
-
-                    if (operacao == "1")
-                    {
-                        resultado = primeironumero + segundonumero;
-                    }
-                    else if (operacao == "2")
-                    {
-                        resultado = primeironumero - segundonumero;
-                    }
-                    else if (operacao == "3")
-                    {
-                        while (segundonumero == 0)
-                        {
-                            Console.WriteLine("Digite um numero maior que zero");
-
-                            segundonumero = Convert.ToDouble(Console.ReadLine());
-                        }
-                        resultado = primeironumero / segundonumero;
-                    }
-                    else if (operacao == "4")
-                    {
-                        resultado = primeironumero * segundonumero;
-                    }
-                    Console.WriteLine("o resultado e " + resultado);
-                    Console.ReadLine();
-                    #endregion
+                    mensagemdeerro();
+                    continue;
 
                 }
+
+                realizarcalculo(operacao);
+
+                
             }
         }
-        static string mostrarmenu()
+        #endregion
+
+        #region Codigo
+        static void mensagemdeerro()
         {
 
+            Console.WriteLine("Digite uma opcao valida");
+
+            Console.ReadLine();
+
+        }
+
+        static string mostrarmenu()
+        {
 
             Console.Clear();
 
@@ -97,8 +73,62 @@ namespace Calculadora_propria
             return opcaosaida1;
 
         }
+        static bool opcaoinvalida(string opcao)
+        {
+
+            bool opcaoinvalida1 = opcao != "S" && opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "s";
 
 
-    
+            return opcaoinvalida1;
+        }
+
+        static void realizarcalculo(string operacao)
+        {
+
+            Console.WriteLine();
+            Console.WriteLine("Digite o primeiro numero");
+
+            double primeironumero = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("digite o segundo numero");
+
+            double segundonumero = Convert.ToDouble(Console.ReadLine());
+            double resultado = 0;
+
+
+            switch (operacao)
+            {
+
+                case "1":
+                    resultado = primeironumero + segundonumero; break;
+
+                case "2":
+                    resultado = primeironumero - segundonumero; break;
+
+                case "3":
+                    resultado = primeironumero * segundonumero; break;
+
+
+                case "4":
+
+                    while (segundonumero == 0)
+                    {
+                        Console.WriteLine("Digite um numero maior que zero");
+
+                        segundonumero = Convert.ToDouble(Console.ReadLine());
+                    }
+                    resultado = primeironumero / segundonumero;
+
+                    break;
+
+            }
+
+            Exibirresultado(resultado);
+        }
+        private static void Exibirresultado(double resultado)
+        {
+            Console.WriteLine("o resultado e " + resultado);
+            Console.ReadLine();
+        }
+        #endregion
     }
 }
