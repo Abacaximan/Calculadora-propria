@@ -28,7 +28,7 @@ namespace Calculadora_propria
 
                 }
 
-                realizarcalculo(operacao);
+                   realizarcalculo(operacao);
 
                 
             }
@@ -82,14 +82,11 @@ namespace Calculadora_propria
             {
                 case "1":
                     resultado = primeironumero + segundonumero; break;
-
                 case "2":
                     resultado = primeironumero - segundonumero; break;
-
                 case "3":
                     resultado = primeironumero * segundonumero; break;
                 case "4":
-
                     while (segundonumero == 0)
                     {
                         Console.WriteLine("Digite um numero maior que zero");
