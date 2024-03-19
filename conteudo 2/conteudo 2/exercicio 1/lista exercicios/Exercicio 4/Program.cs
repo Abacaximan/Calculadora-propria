@@ -10,11 +10,6 @@
 
                 Console.WriteLine("calculadora para consumo de combustivel");
 
-
-
-
-
-
                 Console.Clear();
                 Console.WriteLine("Digite a quilometragem inicial");
                 string quilometrageminicial = "";
@@ -27,11 +22,7 @@
                 double quilometragemfinal2 = Convert.ToDouble(quilometragemfinal);
                 
                 Console.WriteLine("Digite o consumo de combustivel (em litros)");
-                string consumomedio = "";
-                consumomedio=Console.ReadLine();   
-               double consumomedio2=Convert.ToDouble(consumomedio);
-
-
+               double consumomedio2=Convert.ToDouble(Console.ReadLine());
 
 
                 double resultado = quilometrageminicial2 - quilometragemfinal2;
