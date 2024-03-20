@@ -24,7 +24,7 @@ namespace Exercicio_19
                 if (imc <= 18.5)
                 {
 
-                    Console.WriteLine("seu imc e igual a: " + imc + "voce esta abaixo do peso ideal");
+                    Console.WriteLine("seu imc e igual a: " + imc + " voce esta abaixo do peso ideal");
 
 
                 }
@@ -33,7 +33,7 @@ namespace Exercicio_19
                 {
 
 
-                    Console.WriteLine("seu imc e igual a: " + imc + "voce esta no peso ideal");
+                    Console.WriteLine("seu imc e igual a: " + imc + " voce esta no peso ideal");
 
 
                 }
@@ -41,7 +41,7 @@ namespace Exercicio_19
                 {
 
 
-                    Console.WriteLine("seu imc e igual a: " + imc + "voce esta acima do peso");
+                    Console.WriteLine("seu imc e igual a: " + imc + " voce esta acima do peso");
 
                 }
 
