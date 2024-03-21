@@ -1,7 +1,7 @@
 ﻿Console.ForegroundColor = ConsoleColor.Red;
 while (true)
 {
-
+    #region imput
     Console.Clear();
 
     Console.WriteLine("digite um numero impar para formar o diamante");
@@ -13,6 +13,8 @@ while (true)
         Console.WriteLine("Digite um numero impar");
 
     }
+    #endregion
+    #region topo do diamante
     else
     {
         int espaçosdiamante = numero / 2;
@@ -26,10 +28,12 @@ while (true)
 
             X += 2;
         }
-
+        #endregion
+        #region dados para formaçao
         espaçosdiamante = 1;
         X = numero - 2;
-
+        #endregion
+        #region Parte de baixo
         for (int i = (numero / 2); i > 0; i--)
         {
 
@@ -42,7 +46,8 @@ while (true)
         Console.WriteLine("Digite S para sair e N para voltar ao inicio");
 
         String sair = Console.ReadLine();
-
+        #endregion
+        #region Saida ou reset do progama
         if (sair == "S")
         {
 
@@ -54,5 +59,6 @@ while (true)
 
             continue;
         }
+        #endregion
     }
 }
