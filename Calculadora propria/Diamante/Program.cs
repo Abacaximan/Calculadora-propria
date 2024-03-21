@@ -4,6 +4,9 @@
     {
         static void Main(string[] args)
         {
+            while (true) {
+
+                Console.Clear();
 
             Console.WriteLine("digite um numero impar para formar o diamante");
 
@@ -48,10 +51,27 @@
 
                 }
 
-                Console.ReadLine();
+                
+
+                Console.WriteLine("Digite S para sair e N para voltar ao inicio");
+
+                String sair = Console.ReadLine();
+
+                if (sair == "S")
+                {
+
+                    break;
+
+                }
+                if (sair == "N")
+                {
+
+                    continue;
+                }
 
 
             }
+          }
         }
     }
 }               
