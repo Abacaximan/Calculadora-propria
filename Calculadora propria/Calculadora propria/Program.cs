@@ -30,8 +30,6 @@ namespace Calculadora_propria
                 }
 
 
-
-
                 else realizarcalculo(operacao);
 
             }
@@ -139,8 +137,6 @@ namespace Calculadora_propria
 
         }
         #endregion
-
-
 
 
     }

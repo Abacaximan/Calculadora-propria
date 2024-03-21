@@ -19,8 +19,6 @@ namespace Exercicio_19
                 double peso=Convert.ToDouble(Console.ReadLine());
 
                 double imc = peso / (altura*altura);
-
-
                 if (imc <= 18.5)
                 {
 
@@ -31,8 +29,6 @@ namespace Exercicio_19
 
                 if (imc >= 18.5 && imc <= 25)
                 {
-
-
                     Console.WriteLine("seu imc e igual a: " + imc + " voce esta no peso ideal");
 
 
@@ -52,8 +48,6 @@ namespace Exercicio_19
    
 
                 }
-
-
                 Console.WriteLine(" Digite S para sair e N para voltar ao inicio ");
 
                 String sair = Console.ReadLine();
