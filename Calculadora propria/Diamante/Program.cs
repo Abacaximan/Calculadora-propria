@@ -1,77 +1,58 @@
-﻿namespace Diamante
+﻿Console.ForegroundColor = ConsoleColor.Red;
+while (true)
 {
-    internal class Program
+
+    Console.Clear();
+
+    Console.WriteLine("digite um numero impar para formar o diamante");
+
+    int numero = Convert.ToInt32(Console.ReadLine());
+
+    if (numero % 2 == 0)
     {
-        static void Main(string[] args)
+        Console.WriteLine("Digite um numero impar");
+
+    }
+    else
+    {
+        int espaçosdiamante = numero / 2;
+        int X = 1;
+        for (int i = 0; i < (numero / 2) + 1; i++)
         {
-            while (true) {
+            Console.Write(new string(' ', espaçosdiamante));
+            Console.WriteLine(new string('X', X));
 
-                Console.Clear();
+            espaçosdiamante--;
 
-            Console.WriteLine("digite um numero impar para formar o diamante");
+            X += 2;
+        }
 
-            int numero = Convert.ToInt32(Console.ReadLine());
+        espaçosdiamante = 1;
+        X = numero - 2;
 
-            if (numero % 2 == 0)
-            {
-                Console.WriteLine("Digite um numero impar");
+        for (int i = (numero / 2); i > 0; i--)
+        {
 
-            }
-            else
-            {
+            Console.Write(new string(' ', espaçosdiamante));
+            Console.WriteLine(new string('X', X));
+            espaçosdiamante++;
+            X -= 2;
+        }
 
-                int espaçosdiamante = numero / 2;
+        Console.WriteLine("Digite S para sair e N para voltar ao inicio");
 
-                int X = 1;
+        String sair = Console.ReadLine();
 
-                for (int i = 0; i < (numero / 2) + 1; i++)
-                {
+        if (sair == "S")
+        {
 
-                    Console.Write(new string (' ', espaçosdiamante));
-                    Console.WriteLine(new string('X',X));
+            break;
 
-                    espaçosdiamante--;
-                    
-                    X+=2;
+        }
+        if (sair == "N")
+        {
 
-                }
-
-                espaçosdiamante = 1;
-                X = numero - 2;
-
-                for (int i = (numero / 2); i > 0; i--)
-                {
-
-
-                    Console.Write(new string(' ', espaçosdiamante));
-                    Console.WriteLine(new string('X', X));
-                    espaçosdiamante++;
-                    X -= 2;
-
-
-                }
-
-                
-
-                Console.WriteLine("Digite S para sair e N para voltar ao inicio");
-
-                String sair = Console.ReadLine();
-
-                if (sair == "S")
-                {
-
-                    break;
-
-                }
-                if (sair == "N")
-                {
-
-                    continue;
-                }
-
-
-            }
-          }
+            continue;
         }
     }
-}               
+}
