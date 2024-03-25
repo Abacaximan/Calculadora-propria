@@ -11,7 +11,7 @@ while (true)
     if (numero % 2 == 0)
     {
         Console.WriteLine("Digite um numero impar");
-
+        Console.ReadLine();
     }
     #endregion
     #region topo do diamante

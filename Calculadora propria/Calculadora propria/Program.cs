@@ -21,7 +21,7 @@ namespace Calculadora_propria
                     break;
 
 
-                if (opcaoinvalida(operacao))
+                else if (opcaoinvalida(operacao))
                 {
 
                     mensagemdeerro();
@@ -29,9 +29,16 @@ namespace Calculadora_propria
 
                 }
 
+                else  if (operacao == "5")
+                {
+                    Gerartabuada();
+
+
+                }
 
                 else realizarcalculo(operacao);
-
+ 
+                
             }
         }
         #endregion
@@ -99,7 +106,7 @@ namespace Calculadora_propria
                     resultado = primeironumero / segundonumero;
 
                     break;
-
+              
             }
             Exibirresultado(resultado);
         }
@@ -108,11 +115,8 @@ namespace Calculadora_propria
             Console.WriteLine("o resultado e " + resultado);
             Console.ReadLine();
         }
-        static void gerartabuada(string operacao) { 
+        static void Gerartabuada() { 
         
-
-             if (operacao == "5")
-            {
                 Console.Clear();
 
                 Console.WriteLine("digite um numero inteiro");
@@ -123,16 +127,13 @@ namespace Calculadora_propria
                 Console.WriteLine($"tabuada do numero {numerodigitado}");
                 Console.WriteLine();
 
-                for (int i = 0; i < 11; i++)
+                for (int i = 1; i <= 10; i++)
                 {
 
-                    Console.WriteLine($"{numerodigitado} x {i}");
-
-                }
-
+                    Console.WriteLine($"{numerodigitado} x {i}= {numerodigitado * i}");
+                    
+                }             
                 Console.ReadLine();
-            }
-
         }
         #endregion
 
